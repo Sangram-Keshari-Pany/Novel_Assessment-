@@ -1,17 +1,24 @@
-import React from 'react';
-import '../css/about.css'; 
+import React, { useContext, useEffect, useState } from 'react';
+import '../css/about.css';
+import { ThemeContext } from '../Themes';
 
 function About() {
+  const { theme } = useContext(ThemeContext);
+  const [darkTheme, setDarkTheme] = useState(theme === 'dark');
+
+  useEffect(() => {
+    setDarkTheme((theme === 'dark'))
+  }, [theme])
   return (
-    <div className="about-container">
+    <div className={`about-container ${darkTheme ? 'darkhome' : 'lighthome'}`}>
       <h4>About This App</h4>
       <p>
-        This Loan Calculator App is a modern, single-page web application built using <strong>React JS</strong> and <strong>Material UI</strong>. 
-        It allows users to calculate loan EMIs (Equated Monthly Installments), view a detailed amortization schedule, 
+        This Loan Calculator App is a modern, single-page web application built using <strong>React JS</strong> and <strong>Material UI</strong>.
+        It allows users to calculate loan EMIs (Equated Monthly Installments), view a detailed amortization schedule,
         and see real-time currency conversions of their EMI using live exchange rates.
       </p>
       <hr />
-      
+
       <h5>📋 Instructions for Candidates</h5>
       <p>Please follow these instructions to complete and submit your project:</p>
       <ul>
@@ -67,7 +74,7 @@ function About() {
 
       <h5>🌍 Currency Conversion API</h5>
       <p>
-        This app integrates with the free tier of the <a href="https://app.exchangerate-api.com" target="_blank" rel="noopener noreferrer">ExchangeRate-API</a> 
+        This app integrates with the free tier of the <a href="https://app.exchangerate-api.com" target="_blank" rel="noopener noreferrer">ExchangeRate-API</a>
         to fetch live exchange rates.
       </p>
       <p>
@@ -91,6 +98,12 @@ function About() {
         <li>Responsive design and collapsible mobile header navigation (In Mobile view)</li>
       </ul>
       <p>✨ For any currency conversion feature to work, make sure the API key is valid and the network allows external API calls.</p>
+      <br />
+      <p style={{ textAlign: "center", color: "#aaa" }}>SPANY</p>
+      <p style={{ textAlign: "center" }}>
+        <a href="mailto:sangrampany546@gmail.com">sangrampany546@gmail.com</a>
+      </p>
+      <br />
     </div>
   );
 }

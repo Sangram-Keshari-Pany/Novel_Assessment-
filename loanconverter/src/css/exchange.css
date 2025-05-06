@@ -1,0 +1,117 @@
+label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.select {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  max-width: 200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  word-break: break-word;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: initial;
+  border-bottom: 1px solid #ddd;
+}
+
+table th:first-child,
+table td:first-child {
+  text-align: left;
+}
+
+table th:last-child,
+table td:last-child {
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 6px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+/* ✅ Tablet & Mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .select {
+    width: 100%;
+    max-width: none;
+    font-size: 1rem;
+  }
+
+  label {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  .select {
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+
+  .pagination span {
+    margin: 8px 0;
+  }
+}

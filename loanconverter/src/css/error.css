@@ -1,78 +1,71 @@
-/* Light Theme Variables */
 :root {
-    --background-light: #f8f9fa;
-    --text-light: #333;
-    --button-light: #1976d2;
-    --button-light-hover: #1976d2;
-    --button-text-light: white;
-    --error-title-light: #333;
-  }
-  
-  /* Dark Theme Variables */
-  [data-theme='dark'] {
-    --background-dark: #333;
-    --text-dark: #f8f9fa;
-    --button-dark: #1976d2;
-    --button-dark-hover: #1565c0;
-    --button-text-dark: white;
-    --error-title-dark: #f8f9fa;
-  }
-  
-  /* Common Error Container Styles */
-  .error-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 2rem;
-    text-align: center;
-    background-color: var(--background-light);  /* Default to light theme */
-    color: var(--text-light);
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* Error Title Styling */
-  .error-title {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    color: var(--error-title-light); /* Default to light theme */
-  }
-  
-  /* Error Button Styling */
-  .error-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    color: var(--button-light); /* Default to light theme */
-    border: 2px solid var(--button-light);
-    background-color: transparent;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .error-button:hover {
-    background-color: var(--button-light-hover); /* Default to light theme */
-    color: var(--button-text-light);
-  }
-  
-  /* Dark Theme Styles */
-  [data-theme='dark'] .error-container {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-  }
-  
-  [data-theme='dark'] .error-title {
-    color: var(--error-title-dark);
-  }
-  
-  [data-theme='dark'] .error-button {
-    color: var(--button-dark);
-    border: 2px solid var(--button-dark);
-  }
-  
-  [data-theme='dark'] .error-button:hover {
-    background-color: var(--button-dark-hover);
-    color: var(--button-text-dark);
-  }
-  
+  --background-light: #f8f9fa;
+  --text-light: #333;
+  --button-light: #1976d2;
+  --button-light-hover: #1976d2;
+  --button-text-light: white;
+  --error-title-light: #333;
+}
+
+[data-theme='dark'] {
+  --background-dark: #000000;
+  --text-dark: #f8f9fa;
+  --button-dark: #1976d2;
+  --button-dark-hover: #1565c0;
+  --button-text-dark: white;
+  --error-title-dark: #f8f9fa;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.error-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--error-title-light);
+}
+
+.error-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  color: var(--button-light);
+  border: 2px solid var(--button-light);
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error-button:hover {
+  background-color: var(--button-light-hover);
+  color: var(--button-text-light);
+}
+
+[data-theme='dark'] .error-container {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+[data-theme='dark'] .error-title {
+  color: var(--error-title-dark);
+}
+
+[data-theme='dark'] .error-button {
+  color: var(--button-dark);
+  border: 2px solid var(--button-dark);
+}
+
+[data-theme='dark'] .error-button:hover {
+  background-color: var(--button-dark-hover);
+  color: var(--button-text-dark);
+}

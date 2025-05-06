@@ -1,44 +1,100 @@
 .about-container {
-    padding: 2rem 164px;
-    color: rgba(0, 0, 0, 0.87);
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5;
+  padding: 2rem 164px;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.darkhome {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.lighthome {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.about-container h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-container h5 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.about-container ul {
+  margin-left: 2rem;
+}
+
+.about-container li {
+  margin-bottom: 0.5rem;
+}
+
+.about-container a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+.about-container code {
+  background: #b2b2b2;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 2rem 64px;
   }
-  
+
   .about-container h4 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
   }
-  
+
   .about-container h5 {
-    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem 32px;
+    font-size: 0.95rem;
+  }
+
+  .about-container h4 {
     font-size: 1.4rem;
-    color: #2c3e50;
   }
-  
+
+  .about-container h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1rem 16px;
+    font-size: 0.9rem;
+  }
+
+  .about-container h4 {
+    font-size: 1.25rem;
+  }
+
+  .about-container h5 {
+    font-size: 1.1rem;
+  }
+
   .about-container ul {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
-  
-  .about-container li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .about-container a {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  .about-container a:hover {
-    text-decoration: underline;
-  }
-  
-  .about-container code {
-    background: #f4f4f4;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-family: monospace;
-  }
-  
+}
